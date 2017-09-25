@@ -1,0 +1,17 @@
+In the hint above, describe the values that are the result of data['timestamp']*fit.slope + fit.intercept?
+  It's the equation of a line, y = mx+b where:
+    m = fit.slope,
+    b = fit.intercept,
+    data['timestamp'] is the x value
+
+How is this calculated?
+  the slope and intercept were calculated by the linear regression function we ran on the data. The result is calculated
+  by matplotlib applying our y=mx+b equation to each data['timestamp'] value and plotting the resulting y
+
+In the same hint, why does this produce a fit line on the graph?
+  because for each x point it produces a y point on the graph in the shape of a line since we're passing it an equation for a line
+  and we're using 'r-' which creates a line between each point so it ends up creating a line.
+
+Why are the created_at values and timestamp values paired correctly to make points on the plot?
+  Because there is a 1 to 1 mapping of created_at values to timestamps, the timestamps are just a
+  different representation of the created_at values.

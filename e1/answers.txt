@@ -1,0 +1,16 @@
+1. Where you did the same calculations with NumPy and Pandas, which did you find easier to work with? Which code do you think is easier to read?
+
+  I think Panda's and dataframes are easier to work with, in both of these they're very simple so they are both very clear
+  on what they're trying to do, but I think Panda's has a more clean output with how Dataframes are printed.
+
+
+2. What were the running times of the two pivot_months_* functions? How can you explain the difference?
+
+  pivot_months_pandas() had a time of 13.7 ms
+  pivot_months_loops() had a time of 397 ms
+
+  The loops function seems to be doing more iterations through the data set, and it is also sorting a list of months
+  and stations. It also is allocating two different arrays of zeros which probably had to do some form of malloc/calloc
+  in C which may be much slower than how Pandas allocates memory for it's dataset in one call.
+  The Panda's api probably also has many optimizations in it to make inserting, modifying, and aggregating
+  data much quicker since it's intended for extremely large data sets.

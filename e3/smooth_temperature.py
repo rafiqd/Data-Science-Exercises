@@ -19,13 +19,14 @@ def main(filename):
     kalman_data = cpu_data[['temperature', 'cpu_percent', 'sys_load_1']]
     initial_state = kalman_data.iloc[0]
     observation_covariance = np.diag([1, 1, 1]) ** 2
-    transition_covariance = np.diag([0.5, 0.5, 0.5]) ** 2
+    transition_covariance = np.diag([0.25, 0.25, 0.25]) ** 2
     transition = [
         [1, -0.27, 0],
         [0, -1.14, 0.85],
         [0, 0.37, 0.06]
     ]
     kf = KalmanFilter(
+        initial_state_mean=initial_state,
         transition_matrices=transition,
         observation_covariance=observation_covariance,
         transition_covariance=transition_covariance
@@ -38,11 +39,12 @@ def main(filename):
         frac=0.025
     )
     plt.figure(figsize=(12, 4))
-    plt.plot(cpu_data['timestamp'], cpu_data[col], 'b.', alpha=0.5)
-    plt.plot(cpu_data['timestamp'], loess_smoothed[:, 1], 'r-')
-    plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-')
+    plt.plot(cpu_data['timestamp'], cpu_data[col], 'b.', alpha=0.5, label='Temperature')
+    plt.plot(cpu_data['timestamp'], loess_smoothed[:, 1], 'r-', label='Loess Smoothed')
+    plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-', label='Kalman Smoothed')
+    plt.legend(loc='upper left', shadow=True, fontsize='large')
     plt.show()  # easier for testing
-    # plt.savefig('cpu.svg') # for final submission
+    plt.savefig('cpu.svg') # for final submission
 
 
 if __name__ == '__main__':

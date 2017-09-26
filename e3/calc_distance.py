@@ -1,3 +1,5 @@
+__author__ = 'rdandoo'
+
 import sys
 import pandas as pd
 import xml.etree.ElementTree as et

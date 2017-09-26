@@ -44,7 +44,7 @@ def main(filename):
     plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-', label='Kalman Smoothed')
     plt.legend(loc='upper left', shadow=True, fontsize='large')
     plt.show()  # easier for testing
-    plt.savefig('cpu.svg') # for final submission
+    plt.savefig('cpu.svg')  # for final submission
 
 
 if __name__ == '__main__':

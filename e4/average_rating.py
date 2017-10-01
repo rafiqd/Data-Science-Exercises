@@ -2,7 +2,7 @@ import sys
 import pandas as pd
 import numpy as np
 import difflib
-from pprint import pprint
+
 
 def main(movie_list_filename, movie_ratings_filename, output_filename):
     movie_list = open(movie_list_filename).readlines()
@@ -34,8 +34,6 @@ def main(movie_list_filename, movie_ratings_filename, output_filename):
     sorted_averages = averages.sort_values(['title'])
     sorted_averages.to_csv(output_filename, index=False)
     return
-
-
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2], sys.argv[3])

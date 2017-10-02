@@ -1,0 +1,19 @@
+Based on your results for the last question, do you think daily temperatures are a good way to predict population density?
+Briefly explain why or why not.
+
+ If you're looking at temperatures that have an extreme value outside of the 15-30c range it is less likely that there
+ will be a high density population there, but within the 15-30c range it seems to be evenly distributed across the
+ range, with maybe a slight preference to higher density areas being in more moderate temperature areas around 15-20c.
+
+The larger data file (stations.json.gz) was kept compressed throughout the analysis. Constantly decompressing the data
+seems inefficient. Why might this be faster than working with the uncompressed .json data?
+
+ We only open the file inot memory once so I think the reading time is overall a very small percentage of the overall
+ exeuction this would become more true with more advanced analysis going on, so I don't think there is much of a difference
+ between reading a compressed or uncompressed file.
+
+ Doing a timing comparison between the two it looks like they are both nearly the same speed to read
+ 0.045042991638183594 - compressed
+ 0.043041229248046875 - uncompressed
+ Working with the compressed file would be nicer since it saves space, the compressed json is 73kb vs uncompressed
+ one being 1216kb, with very large data sets having uncompressed data would eat a lot more disk space needlessly.

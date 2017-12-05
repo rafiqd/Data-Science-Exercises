@@ -1,0 +1,21 @@
+Required Libraries:
+    Pandas
+    Numpy
+    skimage
+    sklearn
+    matplotlib
+
+Usage:
+    python weather_prediction.py <weather_directory> <image_directory>
+
+        weather_directory:  directory with csv weather files
+        image_directory:    directory with image files
+
+Example Usage:
+    python weather_prediction.py yvr-weather katkam-scaled
+
+Program Output:
+    Console: Model Accuracy Score
+    Files: Two files, errors.png and correct.png
+        errors.png:     a plot showing the precited errors and where it got them wrong
+        correct.png:    a plot showing the predicted correct values and what it got right

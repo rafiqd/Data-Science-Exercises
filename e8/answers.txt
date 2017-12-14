@@ -1,0 +1,17 @@
+Which model did the best for the colour-prediction task? Can you give a theory about why?
+The K nearest neighbors model seemed to give the best prediction, with SVM being close.
+I think K nearest works well for colours because colours close to each other are probably the same or very
+similar and probably in the same category as each other.
+
+Have a look at the cities in your test data where the weather model makes the wrong prediction.
+Do you feel like the model is making reasonable mistakes?
+Yes, a lot of the errors seem to be cities like Vancouver/Seattle or Toronto/Ottawa that have
+very similar weather patterns even on a daily basis because they're close together so there
+probably isn't any reasonable way to tell them apart from data.
+
+Can you think of any weather features that we could potentially add to make better predictions?
+humidity might help, some areas that are relatively close to each other might have different humidity
+levels if they're more inland or in areas that have swaps etc that might make it feel.
+Also wind speeds and direction could help, depending on the local geography or where the ocean/water is
+the wind directions might be different for places with similar temperatures, rainfall, and snowfall, and
+help to distinguish them.

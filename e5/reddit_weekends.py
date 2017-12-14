@@ -3,7 +3,6 @@ import numpy as np
 import sys
 import gzip
 import scipy.stats
-import matplotlib.pyplot as plt
 
 OUTPUT_TEMPLATE = (
     "Initial (invalid) T-test p-value: {initial_ttest_p:.3g}\n"
@@ -39,12 +38,15 @@ def main(filename):
     def get_iso_week(df):
         year, week, day = df['date'].isocalendar()
         return "%s%s" % (str(year), str(week))
+
     weekdays.is_copy = False
     weekends.is_copy = False
     weekends['weekid'] = weekends.apply(get_iso_week, axis=1)
     weekdays['weekid'] = weekdays.apply(get_iso_week, axis=1)
     weekends_group_means = weekends.groupby(['weekid'])['comment_count'].mean()
     weekdays_group_means = weekdays.groupby(['weekid'])['comment_count'].mean()
+    print(weekdays_group_means)
+    print(weekends_group_means)
 
     weekly_weekend_normal_test = scipy.stats.normaltest(weekends_group_means)
     weekly_weekday_normal_test = scipy.stats.normaltest(weekdays_group_means)
@@ -67,10 +69,6 @@ def main(filename):
         weekly_ttest_p=weekly_pvalue,
         utest_p=utest_pval,
     ))
-    plt.hist(weekends_group_means, alpha=0.5, label='weekdays')
-    plt.hist(weekdays_group_means, alpha=0.5, label='weekends')
-    plt.legend(loc='upper right')
-    plt.show()
 
 if __name__ == "__main__":
     main(sys.argv[1])

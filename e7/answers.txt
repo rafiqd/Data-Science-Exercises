@@ -1,0 +1,10 @@
+Looking at your dog-rates.ipynb, do you think the residual are close-enough to being normal to look at the OLS p-value?
+Yes the histogram output looks close enough to normal with it centered at about 0.
+
+Can you reasonably conclude that the ratings are increasing?
+Yes the p-value is very small p < 0.05, so we can reject the null hypothesis that there is no increase over time.
+
+
+Do you think that the new “better” prediction is letting the Kalman filter do a better job capturing the true signal in the noise?
+yes the better prediction seems to make the Kalman filter follow the data very well with capturing the extreme value spikes.
+while staying relatively smooth when the temperature is staying between a small range with few outliers.

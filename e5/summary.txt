@@ -1,0 +1,55 @@
+File: data-1.csv
+X Value - Mean 8.717696, Standard Deviation 12.155517, Range [-22.635878, 35.237055]
+Y Value - Mean 12.522874, Standard Deviation 6.639964, Range [-2.565088, 27.384153]
+Correlation Coefficient: 0.950326
+Strong positive correlation between x and y, x's mean seems to be close to the middle
+of the range and the data is spread through the range since it has a larger SD,
+y's mean is more to the left of the range and the data is more grouped around the
+mean but has a longer right end tail.
+
+=====================================================================================
+File: data-2.csv
+X Value - Mean -0.710787, Standard Deviation 11.481584, Range [-33.271113, 27.647000]
+Y Value - Mean -0.748987, Standard Deviation 6.257918, Range [-18.621804, 14.147315]
+Correlation Coefficient: 0.955153
+Strong positive correlation between x and y, both X and Y's means seem to be close
+to the middle of their ranges, X has a larger SD so it's data is more spread out.
+
+=====================================================================================
+File: data-3.csv
+X Value - Mean 0.968907, Standard Deviation 2.235558, Range [-2.449064, 4.518885]
+Y Value - Mean 8.508535, Standard Deviation 1.149301, Range [6.641734, 10.551871]
+Correlation Coefficient: 0.981937
+strong positive correlation between x and y, both x and y have a small range,
+X looks like its mean is more to the left of the range but it's data is spread out a lot
+since it has a very high SD, Y's mean looks like its close to the middle and has its
+data evenly spread out since its SD is about 1.
+
+=====================================================================================
+File: data-4.csv
+X Value - Mean 49.905086, Standard Deviation 28.508611, Range [0.000000, 87.376700]
+Y Value - Mean 18.553837, Standard Deviation 16.545896, Range [0.000000, 44.565040]
+Correlation Coefficient: -0.081193
+Very weak or next to no correlation between x and y, X looks like it's mean is close
+to the middle of the range, and it's SD is decently large that the data must be fairly
+spread out, Y's mean is also close to the middle of it's range and has a large SD
+so the data is probably spread out a lot.
+
+=====================================================================================
+File: data-5.csv
+X Value - Mean 49.909994, Standard Deviation 28.500001, Range [4.337892, 91.052863]
+Y Value - Mean 18.555525, Standard Deviation 16.540796, Range [0.055498, 49.934197]
+Correlation Coefficient: -0.088236
+Very weak or no correlation between X and Y, X's mean is in the centre of the range
+and looks like it could be shaped like a normal distribution, Y's mean is more to the
+left of the range and looks like it would have a longer right tail.
+
+=====================================================================================
+File: data-6.csv
+X Value - Mean 7.216155, Standard Deviation 11.921599, Range [-24.333821, 35.402139]
+Y Value - Mean 7.602215, Standard Deviation 11.764382, Range [-22.956357, 36.079874]
+Correlation Coefficient: 0.935069
+strong positive correlation between X and Y, very similar means, SDs and ranges,
+looks like they could have both been sampled from the same population.
+
+=====================================================================================

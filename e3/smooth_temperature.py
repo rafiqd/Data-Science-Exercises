@@ -1,5 +1,3 @@
-__author__ = 'rdandoo'
-
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -41,11 +39,10 @@ def main(filename):
         frac=0.025
     )
     plt.figure(figsize=(12, 4))
-    plt.plot(cpu_data['timestamp'], cpu_data[col], 'b.', alpha=0.5, label='Temperature')
+    plt.plot(cpu_data['timestamp'], cpu_data[col], 'b.', alpha=0.5, label='Temperature Measurement')
     plt.plot(cpu_data['timestamp'], loess_smoothed[:, 1], 'r-', label='Loess Smoothed')
     plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-', label='Kalman Smoothed')
     plt.legend(loc='upper left', shadow=True, fontsize='large')
-    plt.show()  # easier for testing
     plt.savefig('cpu.svg')  # for final submission
 
 

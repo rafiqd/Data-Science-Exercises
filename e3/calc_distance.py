@@ -1,5 +1,3 @@
-__author__ = 'rdandoo'
-
 import sys
 import pandas as pd
 import xml.etree.ElementTree as et
@@ -79,7 +77,7 @@ def haversine(df):
     lat2 = math.radians(df['lat_x'])
     lon1 = math.radians(df['lon_y'])
     lon2 = math.radians(df['lon_x'])
-    r = 6371000  # earth's radius in meters
+    r = 6371000  # earth's radius in meters -- maybe not totally right since earth isn't a sphere but close enough
     x = math.sqrt((math.sin((lat2 - lat1)/2)**2) + math.cos(lat1)*math.cos(lat2)*(math.sin((lon2 - lon1)/2) ** 2))
     dist = 2 * r * math.asin(x)
     return dist

@@ -1,0 +1,11 @@
+In your reddit_relative.py, what intermediate results did you .cache()?
+Briefly describe what would have happened if you hadn't used .cache() anywhere.
+(No need to time it, unless you really want to.)
+cached the comments dataframe after reading it in, without it we would end up reading in the
+file twice during both groupBy commands, this way after the first groupBy command the
+dataframe is cached into memory so we dont need to read it again.
+
+How did marking DataFrames for broadcast affect the running time of the “best author” program above?
+using broadcasting on the dataframe sped up the program by a decent amount.
+36s with broadcast on
+42s with broadcast off

@@ -1,0 +1,2 @@
+What was the application ID you saw in the YARN frontend of the job where you actually ran the first_spark.py on the cluster?
+application_1506888802885_12665

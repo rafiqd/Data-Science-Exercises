@@ -1,0 +1,3 @@
+spark-submit C:\Users\Rafiq\sfu\cmpt318\e10\reddit_averages.py C:\Users\Rafiq\sfu\cmpt318\e10\reddit-2 C:\Users\Rafiq\sfu\cmpt318\e10\output
+
+spark-submit C:\Users\Rafiq\sfu\cmpt318\e10\wikipedia_popular.py C:\Users\Rafiq\sfu\cmpt318\e10\pagecounts-0 C:\Users\Rafiq\sfu\cmpt318\e10\wiki_output

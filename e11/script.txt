@@ -1,0 +1,3 @@
+.\spark-submit C:\Users\Rafiq\sfu\cmpt318\e11\reddit_relative.py C:\Users\Rafiq\sfu\cmpt318\e11\reddit-1 C:\Users\Rafiq\sfu\cmpt318\e11\output
+
+spark-submit C:\Users\Rafiq\sfu\cmpt318\e11\correlate_logs.py C:\Users\Rafiq\sfu\cmpt318\e11\nasa-logs-1

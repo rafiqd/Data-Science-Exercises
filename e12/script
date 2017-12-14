@@ -1,0 +1,1 @@
+spark-submit C:\Users\Rafiq\sfu\cmpt318\e12\wordcount.py C:\Users\Rafiq\sfu\cmpt318\e12\wordcount-1 C:\Users\Rafiq\sfu\cmpt318\e12\output

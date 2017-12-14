@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+import time
+
 
 def main(stations_filename, city_data_filename, output_filename):
 
@@ -11,7 +13,10 @@ def main(stations_filename, city_data_filename, output_filename):
     stations = pd.read_json(station_fh, lines=True)
 
     city_data = pd.read_csv(city_data_filename).dropna(subset=['population', 'area'])
+    start = time.time()
     city_data = city_data.apply(convert_area, axis=1)
+    end = time.time()
+    print(end-start)
     city_data = city_data[city_data['area'] <= 10000]
     city_data = city_data.apply(best_tmax, stations=stations, axis=1)
     city_data['avg_tmax'] = np.divide(city_data['avg_tmax'], 10)

@@ -1,0 +1,25 @@
+In the A/B test analysis, do you feel like we're p-hacking?
+No, we aren't transforming data at all, we aren't excluding values, we aren't running
+many tests and only showing those with p < 0.05. I think our second set of questions of instructors would be a legitamate
+question to ask and excluding members who aren't teachers for that case isn't p value hacking.
+
+How comfortable are you coming to a conclusion at p < 0.05?
+95% comfortable
+
+If we had done T-tests between each pair of sorting implementation results, how many tests would we run?
+c(n,2) where n = 7, the number of sorts we have. So c(7,2) = 21
+
+If we looked for p < 0.05 in them, what would the probability be of having all conclusions correct, just by chance?
+That's the effective p-value of the many-T-tests analysis.
+[We could have done a Bonferroni correction when doing multiple T-tests,
+ which is a fancy way of saying “for mm tests, look for significance at α/mα/m”.]
+(0.95)^21 = 0.3405. 34.05% chance of all conclusions being correct.
+
+
+Give a ranking of the sorting implementations by speed, including which ones could not be distinguished.
+(i.e. which pairs could our experiment not conclude had different running times?)
+
+1: qs1
+2: partition_sort
+3-4: qs4, qs5, too close to tell, can't reject null hypo
+5-7: merge1, qs5, qs4, too close to tell, can't reject null hypo

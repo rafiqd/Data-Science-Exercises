@@ -1,0 +1,1 @@
+spark-submit C:\Users\Rafiq\sfu\cmpt318\e9\weather_etl.py C:\Users\Rafiq\sfu\cmpt318\e9\weather-1 C:\Users\Rafiq\sfu\cmpt318\e9\output
